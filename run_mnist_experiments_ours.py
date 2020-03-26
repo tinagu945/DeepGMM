@@ -43,6 +43,7 @@ def run_experiment(scenario_name):
         method.fit(train.x, train.z, train.y, dev.x, dev.z, dev.y,
                    g_dev=dev.g, verbose=True)
         g_pred_test = method.predict(test.x)
+        import pdb;pdb.set_trace()
         mse = float(((g_pred_test - test.g) ** 2).mean())
 
         print("---------------")
